@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 
 const App = () => (
-  <div>
-    <h1>US Dollar to Euro:</h1>
-    <Amount>{amount => <Euro amount={amount} />}</Amount>
-
-    <h1>US Dollar to Pound:</h1>
-    <Amount>{amount => <Pound amount={amount} />}</Amount>
-  </div>
+  <Amount>
+    {amount => (
+      <div>
+        <Pound amount={amount} />
+        <Euro amount={amount} />
+      </div>
+    )}
+  </Amount>
 );
 
 class Amount extends Component {
@@ -30,14 +31,14 @@ class Amount extends Component {
   render() {
     return (
       <div>
+        <span>US Dollar: {this.state.amount} </span>
+
         <button type="button" onClick={this.onIncrement}>
           +
         </button>
         <button type="button" onClick={this.onDecrement}>
           -
         </button>
-
-        <p>US Dollar: {this.state.amount}</p>
 
         {this.props.children(this.state.amount)}
       </div>
