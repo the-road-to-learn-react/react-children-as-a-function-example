@@ -1,6 +1,6 @@
 # react-children-as-a-function-example
 
-[![Build Status](https://travis-ci.org/the-road-to-learn-react/react-children-as-a-function-example.svg?branch=master)](https://travis-ci.org/the-road-to-learn-react/react-children-as-a-function-example) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/)
+[![Build Status](https://travis-ci.org/the-road-to-learn-react/react-children-as-a-function-example.svg?branch=master)](https://travis-ci.org/the-road-to-learn-react/react-children-as-a-function-example) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/the-road-to-learn-react/react-children-as-a-function-example.svg)](https://greenkeeper.io/)
 
 Showcasing how render prop components can be used to build a simple currency converter. [Read more about it.](https://www.robinwieruch.de/react-render-props-pattern/)
 
