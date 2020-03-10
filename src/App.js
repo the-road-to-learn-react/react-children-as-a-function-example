@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const App = () => (
   <Amount>
@@ -11,40 +11,32 @@ const App = () => (
   </Amount>
 );
 
-class Amount extends Component {
-  constructor(props) {
-    super(props);
+const Amount = ({ children }) => {
+  const [amount, setAmount] = React.useState(0);
 
-    this.state = {
-      amount: 0,
-    };
-  }
-
-  onIncrement = () => {
-    this.setState(state => ({ amount: state.amount + 1 }));
+  const handleIncrement = () => {
+    setAmount(amount + 1);
   };
 
-  onDecrement = () => {
-    this.setState(state => ({ amount: state.amount - 1 }));
+  const handleDecrement = () => {
+    setAmount(amount - 1);
   };
 
-  render() {
-    return (
-      <div>
-        <span>US Dollar: {this.state.amount} </span>
+  return (
+    <div>
+      <span>US Dollar: {amount} </span>
 
-        <button type="button" onClick={this.onIncrement}>
-          +
-        </button>
-        <button type="button" onClick={this.onDecrement}>
-          -
-        </button>
+      <button type="button" onClick={handleIncrement}>
+        +
+      </button>
+      <button type="button" onClick={handleDecrement}>
+        -
+      </button>
 
-        {this.props.children(this.state.amount)}
-      </div>
-    );
-  }
-}
+      {children(amount)}
+    </div>
+  );
+};
 
 const Euro = ({ amount }) => <p>Euro: {amount * 0.86}</p>;
 
